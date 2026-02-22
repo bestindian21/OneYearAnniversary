@@ -858,8 +858,9 @@ footer p {
         left: 0 !important;
         width: 100% !important;
         height: 150px !important;
-        padding: 20px !important;
+        padding: 20px 10px !important;
         margin: 0 !important;
+        gap: 30px !important;
     }
 
     .character {
