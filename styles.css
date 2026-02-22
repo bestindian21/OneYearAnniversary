@@ -854,7 +854,7 @@ footer p {
 
     .characters {
         position: absolute !important;
-        top: 0 !important;
+        top: -40px !important;
         left: 0 !important;
         width: 100% !important;
         height: auto !important;
