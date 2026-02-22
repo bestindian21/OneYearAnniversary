@@ -846,70 +846,18 @@ footer p {
 }
 
 /* Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .hero {
-        min-height: 80vh;
-    }
-
-    .characters {
-        position: absolute;
-        width: 100%;
-        height: auto;
-        justify-content: center;
-        gap: 20px;
-        padding: 20px;
-        flex-direction: row;
-    }
-
-    .character {
-        width: clamp(100px, 14vw, 140px);
-        height: clamp(100px, 14vw, 140px);
-        animation: float 3s ease-in-out infinite !important;
-    }
-
-    .character.darsh {
-        animation: float 3s ease-in-out infinite !important;
-    }
-
-    .character.lakshmi {
-        animation: float 3s ease-in-out infinite 1s !important;
-    }
-
-    .video-container {
-        max-width: 100%;
-        min-height: 250px;
-    }
-
-    .falling-photos-container {
-        height: clamp(350px, 50vh, 450px);
-    }
-
-    .falling-photo {
-        width: clamp(80px, 10vw, 130px);
-        height: clamp(80px, 10vw, 130px);
-        animation: fall linear infinite !important;
-        animation-duration: calc(6s + var(--index) * 0.5s) !important;
-        animation-delay: calc(var(--index) * 0.2s) !important;
-    }
-
-    .modal-content {
-        max-width: 95%;
-    }
-
-    .letter-card {
-        padding: clamp(20px, 4vw, 30px);
-    }
-
     .scroll-indicator {
         display: none !important;
     }
-}
 
-@media (min-width: 769px) {
-    .characters {
-        display: flex;
+    .character {
+        width: clamp(100px, 15vw, 150px);
+        height: clamp(100px, 15vw, 150px);
     }
 }
+
 @media (min-width: 769px) {
     .characters {
         display: flex;
