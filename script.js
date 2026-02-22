@@ -1,7 +1,8 @@
 // Countdown Timer - Count UP from Anniversary Date
 function updateCountdown() {
-    // Our anniversary: February 24, 2025
-    const anniversaryStart = new Date('2025-02-24').getTime();
+    // Our anniversary: February 24, 2025 (EST timezone)
+    // Adjust for EST (UTC-5) by adding 5 hours to UTC midnight
+    const anniversaryStart = new Date('2025-02-24').getTime() + (5 * 60 * 60 * 1000);
     const now = new Date().getTime();
     const elapsed = now - anniversaryStart;
 
