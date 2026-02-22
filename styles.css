@@ -854,12 +854,13 @@ footer p {
 
     .characters {
         position: absolute !important;
-        top: -40px !important;
+        top: 10px !important;
         left: 0 !important;
         width: 100% !important;
         height: auto !important;
         padding: 15px 20px !important;
         margin-bottom: 0 !important;
+        transform: translateY(-60px) !important;
     }
 
     .character {
