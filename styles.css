@@ -849,23 +849,21 @@ footer p {
 @media (max-width: 768px) {
     .hero {
         min-height: 80vh;
-        padding: 20px 10px;
     }
 
     .characters {
-        position: static;
-        width: auto;
+        position: absolute;
+        width: 100%;
         height: auto;
         justify-content: center;
         gap: 20px;
-        margin-bottom: 20px;
-        padding: 0;
-        z-index: 1;
+        padding: 20px;
+        flex-direction: row;
     }
 
     .character {
-        width: clamp(80px, 12vw, 120px);
-        height: clamp(80px, 12vw, 120px);
+        width: clamp(100px, 14vw, 140px);
+        height: clamp(100px, 14vw, 140px);
         animation: float 3s ease-in-out infinite !important;
     }
 
@@ -883,32 +881,15 @@ footer p {
     }
 
     .falling-photos-container {
-        height: clamp(300px, 45vh, 400px);
-        border: 1px solid #ffb6d9;
+        height: clamp(350px, 50vh, 450px);
     }
 
     .falling-photo {
         width: clamp(80px, 10vw, 130px);
         height: clamp(80px, 10vw, 130px);
-        animation-duration: calc(8s + var(--index) * 0.3s) !important;
-        animation-delay: calc(var(--index) * 0.15s) !important;
-    }
-
-    @keyframes fall {
-        0% {
-            transform: translateY(-200px) translateX(0px) rotate(0deg) scale(0.8);
-            opacity: 0;
-        }
-        10% {
-            opacity: 1;
-        }
-        90% {
-            opacity: 1;
-        }
-        100% {
-            transform: translateY(450px) translateX(0px) rotate(180deg) scale(1);
-            opacity: 0;
-        }
+        animation: fall linear infinite !important;
+        animation-duration: calc(6s + var(--index) * 0.5s) !important;
+        animation-delay: calc(var(--index) * 0.2s) !important;
     }
 
     .modal-content {
@@ -920,10 +901,15 @@ footer p {
     }
 
     .scroll-indicator {
-        bottom: 30px;
+        display: none !important;
     }
 }
 
+@media (min-width: 769px) {
+    .characters {
+        display: flex;
+    }
+}
 @media (min-width: 769px) {
     .characters {
         display: flex;
